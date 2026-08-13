@@ -1,0 +1,15 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("#quarto-header");
+  if (!header || header.querySelector("#quarto-announcement")) return;
+
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const banner = document.createElement("div");
+  banner.id = "quarto-announcement";
+  banner.innerHTML = `
+    <div class="quarto-announcement-content">
+      <p><img class="iasi-ants-image" src="${offset}resources/images/ants.png" alt=""></p>
+    </div>`;
+  header.prepend(banner);
+});
+</script>
