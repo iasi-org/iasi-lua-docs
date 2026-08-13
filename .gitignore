@@ -73,3 +73,6 @@ _cache/
 
 # Codex
 .codex*
+
+# Artefacto temporal compuesto para GitHub Pages
+/_pages/
