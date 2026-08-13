@@ -6,7 +6,7 @@
     "section": "",
     "text": "IASI Lua Technical Guide\niasi-lua distribuye extensiones Lua reutilizables para Quarto dentro del ecosistema IASI. Esta guía explica cómo instalar y utilizar sus extensiones desde un proyecto consumidor.\nLa primera extensión disponible es IASI PlantUML, que convierte bloques PlantUML en imágenes integradas en el documento durante el renderizado.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "IASI Lua Technical Guide"
     ]
   },
@@ -17,7 +17,7 @@
     "section": "Qué aprenderás",
     "text": "Qué aprenderás\n\nInstalar una extensión de iasi-lua en un proyecto Quarto.\nEjecutar y configurar el servidor PlantUML.\nEscribir diagramas como código dentro de archivos QMD.\nControlar el formato, la caché y los estilos compartidos.\nDiagnosticar los errores de conexión y renderizado más frecuentes.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "IASI Lua Technical Guide"
     ]
   },
@@ -28,7 +28,7 @@
     "section": "Alcance",
     "text": "Alcance\nEsta es una guía de uso. La arquitectura del núcleo Lua, la creación de nuevas extensiones y el proceso de distribución se documentarán por separado en la guía técnica.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "IASI Lua Technical Guide"
     ]
   },
@@ -39,7 +39,7 @@
     "section": "",
     "text": "1.1 Qué es IASI Lua\niasi-lua es la plataforma de extensiones Lua para Quarto del ecosistema IASI. Cada extensión se distribuye como un paquete autónomo que el proyecto consumidor conserva en su propio directorio _extensions/.\nEste modelo aporta tres propiedades:",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
   },
@@ -50,7 +50,7 @@
     "section": "",
     "text": "Reproducibilidad: el proyecto contiene la versión de la extensión que utiliza.\nAislamiento: cada publicación instala únicamente las extensiones que necesita.\nTrazabilidad: la extensión viaja con el código del documento y puede versionarse junto a él.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
   },
@@ -61,7 +61,7 @@
     "section": "1.2 IASI PlantUML",
     "text": "1.2 IASI PlantUML\nIASI PlantUML transforma bloques .plantuml en imágenes durante el renderizado de Quarto. La extensión:\n\nEnvía el código mediante POST a un servidor PlantUML.\nIncorpora la imagen resultante al mediabag de Pandoc.\nConserva atributos como identificador, anchura y texto alternativo.\nPuede almacenar en caché resultados válidos.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
   },
@@ -72,7 +72,7 @@
     "section": "1.3 Flujo de uso",
     "text": "1.3 Flujo de uso\nQMD → filtro IASI PlantUML → servidor PlantUML → imagen → HTML/PDF\nEl documento conserva el diagrama como texto versionable; la imagen es un resultado derivado del proceso de publicación.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
     ]
   },
@@ -83,7 +83,7 @@
     "section": "",
     "text": "2.1 Requisitos\nPara utilizar IASI PlantUML necesitas:",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalación</span>"
     ]
   },
@@ -94,7 +94,7 @@
     "section": "",
     "text": "Quarto 1.4 o posterior.\nUn proyecto Quarto.\nAcceso a un servidor PlantUML.\nBash para utilizar los scripts locales de iasi-lua.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalación</span>"
     ]
   },
@@ -105,7 +105,7 @@
     "section": "2.2 Servidor PlantUML local",
     "text": "2.2 Servidor PlantUML local\nLa configuración Docker actual de IASI publica PlantUML en el puerto 10025:\nhttp://localhost:10025\nPuedes comprobar que responde abriendo esa dirección en el navegador o consultándola con curl.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalación</span>"
     ]
   },
@@ -116,7 +116,7 @@
     "section": "2.3 Instalar desde el repositorio local",
     "text": "2.3 Instalar desde el repositorio local\nDesde iasi-lua, construye las distribuciones e instala la extensión en el proyecto consumidor:\n./scripts/install-local.sh /ruta/al/proyecto\nEl script genera las extensiones y ejecuta internamente quarto add. El proyecto recibirá:\n_extensions/\n└── iasi-plantuml/",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalación</span>"
     ]
   },
@@ -127,7 +127,7 @@
     "section": "2.4 Verificar la instalación",
     "text": "2.4 Verificar la instalación\nComprueba que existe el manifiesto:\n_extensions/iasi-plantuml/_extension.yml\nNo edites los archivos instalados dentro de _extensions/: son una distribución generada y deben reemplazarse mediante una nueva instalación.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalación</span>"
     ]
   },
@@ -138,7 +138,7 @@
     "section": "",
     "text": "3.1 Activar el filtro\nAñade la extensión a _quarto.yml:",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Configuración</span>"
     ]
   },
@@ -149,7 +149,7 @@
     "section": "",
     "text": "filters:\n  - iasi-plantuml",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Configuración</span>"
     ]
   },
@@ -160,7 +160,7 @@
     "section": "3.2 Configuración recomendada",
     "text": "3.2 Configuración recomendada\nPara el servidor Docker local de IASI:\nfilters:\n  - iasi-plantuml\n\nfilter-options:\n  plantuml:\n    enabled: true\n    server: http://localhost:10025\n    format: png\n    cache: true\n    styles: []",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Configuración</span>"
     ]
   },
@@ -171,7 +171,7 @@
     "section": "3.3 Opciones",
     "text": "3.3 Opciones\n\nenabled\n\nActiva o desactiva el procesamiento de bloques PlantUML.\n\nserver\n\nURL base del servidor. La extensión añade la ruta correspondiente al formato solicitado.\n\nformat\n\nFormato de imagen solicitado. La distribución actual utiliza png de forma predeterminada.\n\ncache\n\nReutiliza imágenes válidas ya generadas para evitar peticiones repetidas.\n\nstyles\n\nLista de archivos PlantUML compartidos que se incorporan a los diagramas.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Configuración</span>"
     ]
   },
@@ -182,7 +182,7 @@
     "section": "3.4 Configuración por documento",
     "text": "3.4 Configuración por documento\nLas opciones también pueden declararse en el YAML de un QMD cuando solo afectan a esa página. La configuración del documento prevalece para ese renderizado.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Configuración</span>"
     ]
   },
@@ -193,7 +193,7 @@
     "section": "",
     "text": "4.1 Primer diagrama\nEscribe un bloque PlantUML dentro del QMD:\nAl renderizar, el bloque se sustituye por la imagen generada.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Diagramas</span>"
     ]
   },
@@ -204,7 +204,7 @@
     "section": "",
     "text": "```{.plantuml}\n@startuml\nUsuario -&gt; Sistema: Solicitud\nSistema --&gt; Usuario: Respuesta\n@enduml\n```",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Diagramas</span>"
     ]
   },
@@ -215,7 +215,7 @@
     "section": "4.2 Identificador y anchura",
     "text": "4.2 Identificador y anchura\nLos atributos habituales de Quarto se escriben en la cabecera del bloque:\n```{.plantuml #fig-flujo width=\"80%\"}\n@startuml\nDocumento -&gt; Filtro\nFiltro -&gt; PlantUML\nPlantUML -&gt; Imagen\n@enduml\n```\nEl identificador permite referenciar la figura desde el documento. La anchura controla su presentación en la salida.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Diagramas</span>"
     ]
   },
@@ -226,7 +226,7 @@
     "section": "4.3 Caption",
     "text": "4.3 Caption\nCuando quieras una figura numerada, añade fig-cap:\n```{.plantuml #fig-arquitectura fig-cap=\"Flujo de generación\"}\n@startuml\nFuente -&gt; Build\nBuild -&gt; Distribución\nDistribución -&gt; Proyecto\n@enduml\n```\nSi no deseas caption ni numeración, omite fig-cap y no utilices un identificador con semántica de figura.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Diagramas</span>"
     ]
   },
@@ -237,7 +237,7 @@
     "section": "4.4 Diagramas mantenibles",
     "text": "4.4 Diagramas mantenibles\n\nUtiliza nombres que expresen responsabilidades, no detalles visuales.\nMantén el diagrama cerca del texto que explica.\nExtrae estilos repetidos a archivos comunes.\nVersiona el código PlantUML; trata la imagen como salida generada.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Diagramas</span>"
     ]
   },
@@ -248,7 +248,7 @@
     "section": "",
     "text": "5.1 Caché\nCon cache: true, la extensión evita regenerar un diagrama cuando su entrada efectiva no ha cambiado. Esto reduce peticiones al servidor y acelera publicaciones con muchos diagramas.\nLa entrada efectiva incluye el código del bloque y la configuración relevante. Un cambio en el diagrama o en los estilos produce una nueva imagen.\nLas imágenes de diagnóstico devueltas por PlantUML no se almacenan como resultados válidos.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Caché y estilos</span>"
     ]
   },
@@ -259,7 +259,7 @@
     "section": "5.2 Desactivar la caché",
     "text": "5.2 Desactivar la caché\nDurante una investigación puedes forzar nuevas peticiones:\nfilter-options:\n  plantuml:\n    cache: false\nVuelve a activarla cuando termines para conservar tiempos de renderizado estables.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Caché y estilos</span>"
     ]
   },
@@ -270,7 +270,7 @@
     "section": "5.3 Estilos compartidos",
     "text": "5.3 Estilos compartidos\nLa opción styles permite aplicar convenciones comunes:\nfilter-options:\n  plantuml:\n    styles:\n      - resources/plantuml/iasi.puml\nLos archivos deben estar disponibles desde el proyecto durante el renderizado. Úsalos para colores, tipografías, componentes y convenciones visuales compartidas.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Caché y estilos</span>"
     ]
   },
@@ -281,7 +281,7 @@
     "section": "5.4 Recomendación",
     "text": "5.4 Recomendación\nMantén los estilos como fuente versionada y propágalos desde iasi-common cuando sean comunes a varios repositorios. No copies manualmente cambios diferentes en cada publicación.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Caché y estilos</span>"
     ]
   },
@@ -292,7 +292,7 @@
     "section": "",
     "text": "6.1 No se puede resolver el host\nUn error como este:\nindica que el nombre configurado no existe en el entorno actual. Para el servidor local utiliza:",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Resolución de problemas</span>"
     ]
   },
@@ -303,7 +303,7 @@
     "section": "",
     "text": "Could not resolve host: javier\n\nserver: http://localhost:10025",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Resolución de problemas</span>"
     ]
   },
@@ -314,7 +314,7 @@
     "section": "6.2 No se puede conectar",
     "text": "6.2 No se puede conectar\nFailed to connect to localhost:10025\nLa URL se resuelve, pero no hay un servicio escuchando. Inicia el contenedor PlantUML y comprueba que publica 10025:8080.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Resolución de problemas</span>"
     ]
   },
@@ -325,7 +325,7 @@
     "section": "6.3 La extensión no se encuentra",
     "text": "6.3 La extensión no se encuentra\nSi Quarto interpreta iasi-plantuml como un filtro inexistente, verifica:\n_extensions/iasi-plantuml/_extension.yml\nSi falta, vuelve a instalar la distribución desde iasi-lua.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Resolución de problemas</span>"
     ]
   },
@@ -336,7 +336,7 @@
     "section": "6.4 PlantUML devuelve un diagnóstico",
     "text": "6.4 PlantUML devuelve un diagnóstico\nUna imagen de diagnóstico suele indicar un error de sintaxis en el bloque. Revisa especialmente:\n\nLa presencia de @startuml y @enduml.\nComillas o caracteres sin cerrar.\nReferencias a estilos inexistentes.\nDirectivas no admitidas por la versión del servidor.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Resolución de problemas</span>"
     ]
   },
@@ -347,7 +347,7 @@
     "section": "6.5 El diagrama no cambia",
     "text": "6.5 El diagrama no cambia\nDesactiva temporalmente la caché y renderiza de nuevo. Si el resultado continúa igual, confirma que estás editando el QMD y la configuración que realmente usa el perfil activo.",
     "crumbs": [
-      "Inicio",
+      "Technical Guide",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Resolución de problemas</span>"
     ]
   }

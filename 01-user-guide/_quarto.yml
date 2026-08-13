@@ -19,11 +19,13 @@ book:
     background: primary
     pinned: true
     left:
-      - text: "Inicio"
+      - text: "User Guide"
         href: index.qmd
-      - text: "IASI Lua"
-        href: https://iasi-org.github.io/iasi-home/artifacts/iasi-lua.html
-      - text: "Repository"
+      - text: "Technical Guide"
+        href: ../technical-guide/
+    right:
+      - icon: github
+        aria-label: "GitHub repository"
         href: https://github.com/iasi-org/iasi-lua
 
 format:

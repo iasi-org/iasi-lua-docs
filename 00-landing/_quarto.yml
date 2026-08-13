@@ -13,10 +13,20 @@ website:
     background: primary
     pinned: true
     left:
-      - text: "Documentation"
-        href: index.qmd
-      - text: "Repository"
-        href: https://github.com/iasi-org/iasi-lua
+      - text: "User Guide"
+        href: user-guide/
+      - text: "Technical Guide"
+        href: technical-guide/
+    tools:
+      - icon: translate
+        href: common/manifesto-bilingual.qmd
+        aria-label: "Idioma / Language"
+      - icon: envelope
+        href: common/contact.qmd
+        aria-label: "Contact us"
+      - icon: github
+        href: https://github.com/iasi-org
+        aria-label: "Explore IASI on GitHub"
 
 format:
   html:
