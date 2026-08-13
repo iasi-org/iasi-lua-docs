@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
 // IASI common layout
-$grid-body-width: 1000px;
+$grid-body-width: 1200px;
 
 // IASI corporate palette
 $iasi-quarto-blue: #39729e;
@@ -14,6 +14,12 @@ $navbar-fg: #ffffff;
 body {
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+#quarto-document-content p,
+#quarto-document-content ul,
+#quarto-document-content ol {
+  max-width: 75ch;
 }
 
 :root {
@@ -121,11 +127,6 @@ body {
 #quarto-header .navbar {
   margin-bottom: 0 !important;
   border-bottom: 0 !important;
-}
-
-/* The chapter is already identified by its page title and sidebar entry. */
-.quarto-secondary-nav .quarto-page-breadcrumbs {
-  display: none !important;
 }
 
 #quarto-header .navbar-brand,
