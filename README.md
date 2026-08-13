@@ -1,2 +1,7 @@
 # iasi-lua-docs
-Documentation anout quarto filters
+
+Documentation for the Lua extensions distributed by the IASI ecosystem.
+
+Publications:
+
+- `01-user-guide/` — installation, configuration, usage, and troubleshooting.

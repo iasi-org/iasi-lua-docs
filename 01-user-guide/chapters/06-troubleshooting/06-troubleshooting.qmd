@@ -1,0 +1,44 @@
+## No se puede resolver el host
+
+Un error como este:
+
+```text
+Could not resolve host: javier
+```
+
+indica que el nombre configurado no existe en el entorno actual. Para el servidor local utiliza:
+
+```yaml
+server: http://localhost:10025
+```
+
+## No se puede conectar
+
+```text
+Failed to connect to localhost:10025
+```
+
+La URL se resuelve, pero no hay un servicio escuchando. Inicia el contenedor PlantUML y comprueba que publica `10025:8080`.
+
+## La extensión no se encuentra
+
+Si Quarto interpreta `iasi-plantuml` como un filtro inexistente, verifica:
+
+```text
+_extensions/iasi-plantuml/_extension.yml
+```
+
+Si falta, vuelve a instalar la distribución desde `iasi-lua`.
+
+## PlantUML devuelve un diagnóstico
+
+Una imagen de diagnóstico suele indicar un error de sintaxis en el bloque. Revisa especialmente:
+
+- La presencia de `@startuml` y `@enduml`.
+- Comillas o caracteres sin cerrar.
+- Referencias a estilos inexistentes.
+- Directivas no admitidas por la versión del servidor.
+
+## El diagrama no cambia
+
+Desactiva temporalmente la caché y renderiza de nuevo. Si el resultado continúa igual, confirma que estás editando el QMD y la configuración que realmente usa el perfil activo.

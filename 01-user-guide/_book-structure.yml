@@ -1,0 +1,9 @@
+book:
+  chapters:
+    - "index.qmd"
+    - "chapters/01-introduction/index.qmd"
+    - "chapters/02-installation/index.qmd"
+    - "chapters/03-configuration/index.qmd"
+    - "chapters/04-diagrams/index.qmd"
+    - "chapters/05-cache-and-styles/index.qmd"
+    - "chapters/06-troubleshooting/index.qmd"
