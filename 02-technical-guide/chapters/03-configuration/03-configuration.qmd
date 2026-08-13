@@ -1,0 +1,46 @@
+## Activar el filtro
+
+Añade la extensión a `_quarto.yml`:
+
+```yaml
+filters:
+  - iasi-plantuml
+```
+
+## Configuración recomendada
+
+Para el servidor Docker local de IASI:
+
+```yaml
+filters:
+  - iasi-plantuml
+
+filter-options:
+  plantuml:
+    enabled: true
+    server: http://localhost:10025
+    format: png
+    cache: true
+    styles: []
+```
+
+## Opciones
+
+`enabled`
+: Activa o desactiva el procesamiento de bloques PlantUML.
+
+`server`
+: URL base del servidor. La extensión añade la ruta correspondiente al formato solicitado.
+
+`format`
+: Formato de imagen solicitado. La distribución actual utiliza `png` de forma predeterminada.
+
+`cache`
+: Reutiliza imágenes válidas ya generadas para evitar peticiones repetidas.
+
+`styles`
+: Lista de archivos PlantUML compartidos que se incorporan a los diagramas.
+
+## Configuración por documento
+
+Las opciones también pueden declararse en el YAML de un QMD cuando solo afectan a esa página. La configuración del documento prevalece para ese renderizado.

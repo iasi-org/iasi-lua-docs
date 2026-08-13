@@ -1,0 +1,10 @@
+project:
+  output-dir: _outputs/html
+
+format:
+  html:
+    theme:
+      - cosmo
+      - resources/css/iasi.scss
+    toc: true
+    number-sections: true

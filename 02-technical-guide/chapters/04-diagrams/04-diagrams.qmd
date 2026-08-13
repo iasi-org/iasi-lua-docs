@@ -1,0 +1,53 @@
+## Primer diagrama
+
+Escribe un bloque PlantUML dentro del QMD:
+
+````qmd
+```{.plantuml}
+@startuml
+Usuario -> Sistema: Solicitud
+Sistema --> Usuario: Respuesta
+@enduml
+```
+````
+
+Al renderizar, el bloque se sustituye por la imagen generada.
+
+## Identificador y anchura
+
+Los atributos habituales de Quarto se escriben en la cabecera del bloque:
+
+````qmd
+```{.plantuml #fig-flujo width="80%"}
+@startuml
+Documento -> Filtro
+Filtro -> PlantUML
+PlantUML -> Imagen
+@enduml
+```
+````
+
+El identificador permite referenciar la figura desde el documento. La anchura controla su presentación en la salida.
+
+## Caption
+
+Cuando quieras una figura numerada, añade `fig-cap`:
+
+````qmd
+```{.plantuml #fig-arquitectura fig-cap="Flujo de generación"}
+@startuml
+Fuente -> Build
+Build -> Distribución
+Distribución -> Proyecto
+@enduml
+```
+````
+
+Si no deseas caption ni numeración, omite `fig-cap` y no utilices un identificador con semántica de figura.
+
+## Diagramas mantenibles
+
+- Utiliza nombres que expresen responsabilidades, no detalles visuales.
+- Mantén el diagrama cerca del texto que explica.
+- Extrae estilos repetidos a archivos comunes.
+- Versiona el código PlantUML; trata la imagen como salida generada.

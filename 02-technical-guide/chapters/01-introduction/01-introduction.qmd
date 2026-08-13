@@ -1,0 +1,26 @@
+## Qué es IASI Lua
+
+`iasi-lua` es la plataforma de extensiones Lua para Quarto del ecosistema IASI. Cada extensión se distribuye como un paquete autónomo que el proyecto consumidor conserva en su propio directorio `_extensions/`.
+
+Este modelo aporta tres propiedades:
+
+- **Reproducibilidad:** el proyecto contiene la versión de la extensión que utiliza.
+- **Aislamiento:** cada publicación instala únicamente las extensiones que necesita.
+- **Trazabilidad:** la extensión viaja con el código del documento y puede versionarse junto a él.
+
+## IASI PlantUML
+
+IASI PlantUML transforma bloques `.plantuml` en imágenes durante el renderizado de Quarto. La extensión:
+
+- Envía el código mediante `POST` a un servidor PlantUML.
+- Incorpora la imagen resultante al *mediabag* de Pandoc.
+- Conserva atributos como identificador, anchura y texto alternativo.
+- Puede almacenar en caché resultados válidos.
+
+## Flujo de uso
+
+```text
+QMD → filtro IASI PlantUML → servidor PlantUML → imagen → HTML/PDF
+```
+
+El documento conserva el diagrama como texto versionable; la imagen es un resultado derivado del proceso de publicación.

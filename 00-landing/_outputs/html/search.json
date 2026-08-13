@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IASI Lua Documentation",
+    "section": "",
+    "text": "Elige la publicación que necesitas."
+  },
+  {
+    "objectID": "index.html#user-guide",
+    "href": "index.html#user-guide",
+    "title": "IASI Lua Documentation",
+    "section": "User Guide",
+    "text": "User Guide\nInstalación, configuración y uso de las extensiones Lua de IASI.\nAbrir User Guide"
+  },
+  {
+    "objectID": "index.html#technical-guide",
+    "href": "index.html#technical-guide",
+    "title": "IASI Lua Documentation",
+    "section": "Technical Guide",
+    "text": "Technical Guide\nArquitectura, mantenimiento y desarrollo de las extensiones.\nAbrir Technical Guide"
+  }
+]

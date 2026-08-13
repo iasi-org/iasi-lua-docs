@@ -1,0 +1,24 @@
+---
+title: "IASI Lua Documentation"
+subtitle: "Guías de uso y documentación técnica"
+---
+
+Elige la publicación que necesitas.
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+## User Guide
+
+Instalación, configuración y uso de las extensiones Lua de IASI.
+
+[Abrir User Guide](user-guide/){.btn .btn-primary}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+## Technical Guide
+
+Arquitectura, mantenimiento y desarrollo de las extensiones.
+
+[Abrir Technical Guide](technical-guide/){.btn .btn-primary}
+:::
+:::

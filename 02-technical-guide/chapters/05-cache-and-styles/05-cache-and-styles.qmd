@@ -1,0 +1,36 @@
+## Caché
+
+Con `cache: true`, la extensión evita regenerar un diagrama cuando su entrada efectiva no ha cambiado. Esto reduce peticiones al servidor y acelera publicaciones con muchos diagramas.
+
+La entrada efectiva incluye el código del bloque y la configuración relevante. Un cambio en el diagrama o en los estilos produce una nueva imagen.
+
+Las imágenes de diagnóstico devueltas por PlantUML no se almacenan como resultados válidos.
+
+## Desactivar la caché
+
+Durante una investigación puedes forzar nuevas peticiones:
+
+```yaml
+filter-options:
+  plantuml:
+    cache: false
+```
+
+Vuelve a activarla cuando termines para conservar tiempos de renderizado estables.
+
+## Estilos compartidos
+
+La opción `styles` permite aplicar convenciones comunes:
+
+```yaml
+filter-options:
+  plantuml:
+    styles:
+      - resources/plantuml/iasi.puml
+```
+
+Los archivos deben estar disponibles desde el proyecto durante el renderizado. Úsalos para colores, tipografías, componentes y convenciones visuales compartidas.
+
+## Recomendación
+
+Mantén los estilos como fuente versionada y propágalos desde `iasi-common` cuando sean comunes a varios repositorios. No copies manualmente cambios diferentes en cada publicación.

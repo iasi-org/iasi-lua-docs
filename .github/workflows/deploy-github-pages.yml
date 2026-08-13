@@ -5,9 +5,8 @@ on:
     branches:
       - main
     paths:
-      - "**/publish/**"
+      - "publish/**"
       - ".github/workflows/deploy-github-pages.yml"
-      - ".github/scripts/assemble-pages.sh"
   workflow_dispatch:
 
 permissions:
@@ -31,16 +30,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Assemble publications
-        run: .github/scripts/assemble-pages.sh
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _pages
+          path: publish
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -1,0 +1,17 @@
+# IASI Lua Technical Guide {.unnumbered}
+
+`iasi-lua` distribuye extensiones Lua reutilizables para Quarto dentro del ecosistema IASI. Esta guía explica cómo instalar y utilizar sus extensiones desde un proyecto consumidor.
+
+La primera extensión disponible es **IASI PlantUML**, que convierte bloques PlantUML en imágenes integradas en el documento durante el renderizado.
+
+## Qué aprenderás {.unnumbered}
+
+- Instalar una extensión de `iasi-lua` en un proyecto Quarto.
+- Ejecutar y configurar el servidor PlantUML.
+- Escribir diagramas como código dentro de archivos QMD.
+- Controlar el formato, la caché y los estilos compartidos.
+- Diagnosticar los errores de conexión y renderizado más frecuentes.
+
+## Alcance {.unnumbered}
+
+Esta es una guía de uso. La arquitectura del núcleo Lua, la creación de nuevas extensiones y el proceso de distribución se documentarán por separado en la guía técnica.

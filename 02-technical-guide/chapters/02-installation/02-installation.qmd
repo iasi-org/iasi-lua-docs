@@ -1,0 +1,43 @@
+## Requisitos
+
+Para utilizar IASI PlantUML necesitas:
+
+- Quarto 1.4 o posterior.
+- Un proyecto Quarto.
+- Acceso a un servidor PlantUML.
+- Bash para utilizar los scripts locales de `iasi-lua`.
+
+## Servidor PlantUML local
+
+La configuración Docker actual de IASI publica PlantUML en el puerto `10025`:
+
+```text
+http://localhost:10025
+```
+
+Puedes comprobar que responde abriendo esa dirección en el navegador o consultándola con `curl`.
+
+## Instalar desde el repositorio local
+
+Desde `iasi-lua`, construye las distribuciones e instala la extensión en el proyecto consumidor:
+
+```bash
+./scripts/install-local.sh /ruta/al/proyecto
+```
+
+El script genera las extensiones y ejecuta internamente `quarto add`. El proyecto recibirá:
+
+```text
+_extensions/
+└── iasi-plantuml/
+```
+
+## Verificar la instalación
+
+Comprueba que existe el manifiesto:
+
+```text
+_extensions/iasi-plantuml/_extension.yml
+```
+
+No edites los archivos instalados dentro de `_extensions/`: son una distribución generada y deben reemplazarse mediante una nueva instalación.

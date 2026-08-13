@@ -1,0 +1,27 @@
+project:
+  type: website
+  resources:
+    - resources/**
+
+profile:
+  default: html
+
+website:
+  title: "IASI Lua Documentation"
+  navbar:
+    title: "IASI"
+    background: primary
+    pinned: true
+    left:
+      - text: "Documentation"
+        href: index.qmd
+      - text: "Repository"
+        href: https://github.com/iasi-org/iasi-lua
+
+format:
+  html:
+    include-in-header:
+      - resources/includes/ants.html
+
+execute:
+  freeze: auto
