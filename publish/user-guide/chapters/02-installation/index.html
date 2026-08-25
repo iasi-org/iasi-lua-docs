@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>2&nbsp; Instalación – IASI Lua User Guide</title>
+<title>2  Instalación – IASI Lua User Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -62,26 +60,13 @@ div.sourceCode
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
-
-
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="../../">
 <link href="../../chapters/03-configuration/index.html" rel="next">
 <link href="../../chapters/01-introduction/index.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script><script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-033556f587114af1154a6a4418e020bf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4595486ea1989c3f473c799d476bc9ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,8 +93,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script>
+}</script><script>
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -138,17 +122,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 </script>
-
-
-
 </head>
-
 <body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">IASI</span>
@@ -160,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">User Guide</span></a>
   </li>  
@@ -169,100 +147,142 @@ document.addEventListener("DOMContentLoaded", () => {
 <span class="menu-text">Technical Guide</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/iasi-org/iasi-lua"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/02-installation/index.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Instalación</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/02-installation/index.html"><span class="chapter-number">2</span>  <span class="chapter-title">Instalación</span></a></li></ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item sidebar-item-section">
   <div class="sidebar-item-container"> 
   <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">IASI Lua User Guide</span></a>
-  </div>
+  <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#iasi-sidebar--index-html" role="navigation" aria-expanded="false" aria-controls="iasi-sidebar--index-html" aria-label="Toggle section"><i class="bi bi-chevron-right ms-2"></i></a>
+</div>
+<ul id="iasi-sidebar--index-html" class="collapse list-unstyled sidebar-section depth2">
+<li class="sidebar-item-section">
+<a href="../../index.html#iasi-lua-user-guide" id="toc-iasi-lua-user-guide" class="nav-link active" data-scroll-target="#iasi-lua-user-guide">IASI Lua User Guide</a>
+  <ul class="collapse list-unstyled sidebar-section depth3" id="iasi-sidebar--index-html-1">
+<li><a href="../../index.html#qu%C3%A9-aprender%C3%A1s" id="toc-qué-aprenderás" class="nav-link" data-scroll-target="#qué-aprenderás">Qué aprenderás</a></li>
+  <li><a href="../../index.html#alcance" id="toc-alcance" class="nav-link" data-scroll-target="#alcance">Alcance</a></li>
+  </ul>
+<a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#iasi-sidebar--index-html-1" role="navigation" aria-expanded="false" aria-controls="iasi-sidebar--index-html-1" aria-label="Toggle section"><i class="bi bi-chevron-right ms-2"></i></a>
 </li>
-        <li class="sidebar-item">
+  </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/01-introduction/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
-  </div>
+ <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Introducción</span></span></a>
+  <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#iasi-sidebar--chapters-01-introduction-index-html" role="navigation" aria-expanded="false" aria-controls="iasi-sidebar--chapters-01-introduction-index-html" aria-label="Toggle section"><i class="bi bi-chevron-right ms-2"></i></a>
+</div>
+<ul id="iasi-sidebar--chapters-01-introduction-index-html" class="collapse list-unstyled sidebar-section depth2">
+<li><a href="../../chapters/01-introduction/index.html#qu%C3%A9-es-iasi-lua" id="toc-qué-es-iasi-lua" class="nav-link active" data-scroll-target="#qué-es-iasi-lua"><span class="header-section-number">1.1</span> Qué es IASI Lua</a></li>
+  <li><a href="../../chapters/01-introduction/index.html#iasi-plantuml" id="toc-iasi-plantuml" class="nav-link" data-scroll-target="#iasi-plantuml"><span class="header-section-number">1.2</span> IASI PlantUML</a></li>
+  <li><a href="../../chapters/01-introduction/index.html#flujo-de-uso" id="toc-flujo-de-uso" class="nav-link" data-scroll-target="#flujo-de-uso"><span class="header-section-number">1.3</span> Flujo de uso</a></li>
+  </ul>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/02-installation/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Instalación</span></span></a>
-  </div>
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Instalación</span></span></a>
+  <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#iasi-sidebar--chapters-02-installation-index-html" role="navigation" aria-expanded="false" aria-controls="iasi-sidebar--chapters-02-installation-index-html" aria-label="Toggle section"><i class="bi bi-chevron-right ms-2"></i></a>
+</div>
+<ul id="iasi-sidebar--chapters-02-installation-index-html" class="collapse list-unstyled sidebar-section depth2">
+<li><a href="../../chapters/02-installation/index.html#requisitos" id="toc-requisitos" class="nav-link active" data-scroll-target="#requisitos"><span class="header-section-number">2.1</span> Requisitos</a></li>
+  <li><a href="../../chapters/02-installation/index.html#servidor-plantuml-local" id="toc-servidor-plantuml-local" class="nav-link" data-scroll-target="#servidor-plantuml-local"><span class="header-section-number">2.2</span> Servidor PlantUML local</a></li>
+  <li><a href="../../chapters/02-installation/index.html#instalar-desde-el-repositorio-local" id="toc-instalar-desde-el-repositorio-local" class="nav-link" data-scroll-target="#instalar-desde-el-repositorio-local"><span class="header-section-number">2.3</span> Instalar desde el repositorio local</a></li>
+  <li><a href="../../chapters/02-installation/index.html#verificar-la-instalaci%C3%B3n" id="toc-verificar-la-instalación" class="nav-link" data-scroll-target="#verificar-la-instalación"><span class="header-section-number">2.4</span> Verificar la instalación</a></li>
+  </ul>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/03-configuration/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Configuración</span></span></a>
-  </div>
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Configuración</span></span></a>
+  <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#iasi-sidebar--chapters-03-configuration-index-html" role="navigation" aria-expanded="false" aria-controls="iasi-sidebar--chapters-03-configuration-index-html" aria-label="Toggle section"><i class="bi bi-chevron-right ms-2"></i></a>
+</div>
+<ul id="iasi-sidebar--chapters-03-configuration-index-html" class="collapse list-unstyled sidebar-section depth2">
+<li><a href="../../chapters/03-configuration/index.html#activar-el-filtro" id="toc-activar-el-filtro" class="nav-link active" data-scroll-target="#activar-el-filtro"><span class="header-section-number">3.1</span> Activar el filtro</a></li>
+  <li><a href="../../chapters/03-configuration/index.html#configuraci%C3%B3n-recomendada" id="toc-configuración-recomendada" class="nav-link" data-scroll-target="#configuración-recomendada"><span class="header-section-number">3.2</span> Configuración recomendada</a></li>
+  <li><a href="../../chapters/03-configuration/index.html#opciones" id="toc-opciones" class="nav-link" data-scroll-target="#opciones"><span class="header-section-number">3.3</span> Opciones</a></li>
+  <li><a href="../../chapters/03-configuration/index.html#configuraci%C3%B3n-por-documento" id="toc-configuración-por-documento" class="nav-link" data-scroll-target="#configuración-por-documento"><span class="header-section-number">3.4</span> Configuración por documento</a></li>
+  </ul>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/04-diagrams/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Diagramas</span></span></a>
-  </div>
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Diagramas</span></span></a>
+  <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#iasi-sidebar--chapters-04-diagrams-index-html" role="navigation" aria-expanded="false" aria-controls="iasi-sidebar--chapters-04-diagrams-index-html" aria-label="Toggle section"><i class="bi bi-chevron-right ms-2"></i></a>
+</div>
+<ul id="iasi-sidebar--chapters-04-diagrams-index-html" class="collapse list-unstyled sidebar-section depth2">
+<li><a href="../../chapters/04-diagrams/index.html#primer-diagrama" id="toc-primer-diagrama" class="nav-link active" data-scroll-target="#primer-diagrama"><span class="header-section-number">4.1</span> Primer diagrama</a></li>
+  <li><a href="../../chapters/04-diagrams/index.html#identificador-y-anchura" id="toc-identificador-y-anchura" class="nav-link" data-scroll-target="#identificador-y-anchura"><span class="header-section-number">4.2</span> Identificador y anchura</a></li>
+  <li><a href="../../chapters/04-diagrams/index.html#caption" id="toc-caption" class="nav-link" data-scroll-target="#caption"><span class="header-section-number">4.3</span> Caption</a></li>
+  <li><a href="../../chapters/04-diagrams/index.html#diagramas-mantenibles" id="toc-diagramas-mantenibles" class="nav-link" data-scroll-target="#diagramas-mantenibles"><span class="header-section-number">4.4</span> Diagramas mantenibles</a></li>
+  </ul>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/05-cache-and-styles/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Caché y estilos</span></span></a>
-  </div>
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Caché y estilos</span></span></a>
+  <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#iasi-sidebar--chapters-05-cache-and-styles-index-html" role="navigation" aria-expanded="false" aria-controls="iasi-sidebar--chapters-05-cache-and-styles-index-html" aria-label="Toggle section"><i class="bi bi-chevron-right ms-2"></i></a>
+</div>
+<ul id="iasi-sidebar--chapters-05-cache-and-styles-index-html" class="collapse list-unstyled sidebar-section depth2">
+<li><a href="../../chapters/05-cache-and-styles/index.html#cach%C3%A9" id="toc-caché" class="nav-link active" data-scroll-target="#caché"><span class="header-section-number">5.1</span> Caché</a></li>
+  <li><a href="../../chapters/05-cache-and-styles/index.html#desactivar-la-cach%C3%A9" id="toc-desactivar-la-caché" class="nav-link" data-scroll-target="#desactivar-la-caché"><span class="header-section-number">5.2</span> Desactivar la caché</a></li>
+  <li><a href="../../chapters/05-cache-and-styles/index.html#estilos-compartidos" id="toc-estilos-compartidos" class="nav-link" data-scroll-target="#estilos-compartidos"><span class="header-section-number">5.3</span> Estilos compartidos</a></li>
+  <li><a href="../../chapters/05-cache-and-styles/index.html#recomendaci%C3%B3n" id="toc-recomendación" class="nav-link" data-scroll-target="#recomendación"><span class="header-section-number">5.4</span> Recomendación</a></li>
+  </ul>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/06-troubleshooting/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Resolución de problemas</span></span></a>
-  </div>
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Resolución de problemas</span></span></a>
+  <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#iasi-sidebar--chapters-06-troubleshooting-index-html" role="navigation" aria-expanded="false" aria-controls="iasi-sidebar--chapters-06-troubleshooting-index-html" aria-label="Toggle section"><i class="bi bi-chevron-right ms-2"></i></a>
+</div>
+<ul id="iasi-sidebar--chapters-06-troubleshooting-index-html" class="collapse list-unstyled sidebar-section depth2">
+<li><a href="../../chapters/06-troubleshooting/index.html#no-se-puede-resolver-el-host" id="toc-no-se-puede-resolver-el-host" class="nav-link active" data-scroll-target="#no-se-puede-resolver-el-host"><span class="header-section-number">6.1</span> No se puede resolver el host</a></li>
+  <li><a href="../../chapters/06-troubleshooting/index.html#no-se-puede-conectar" id="toc-no-se-puede-conectar" class="nav-link" data-scroll-target="#no-se-puede-conectar"><span class="header-section-number">6.2</span> No se puede conectar</a></li>
+  <li><a href="../../chapters/06-troubleshooting/index.html#la-extensi%C3%B3n-no-se-encuentra" id="toc-la-extensión-no-se-encuentra" class="nav-link" data-scroll-target="#la-extensión-no-se-encuentra"><span class="header-section-number">6.3</span> La extensión no se encuentra</a></li>
+  <li><a href="../../chapters/06-troubleshooting/index.html#plantuml-devuelve-un-diagn%C3%B3stico" id="toc-plantuml-devuelve-un-diagnóstico" class="nav-link" data-scroll-target="#plantuml-devuelve-un-diagnóstico"><span class="header-section-number">6.4</span> PlantUML devuelve un diagnóstico</a></li>
+  <li><a href="../../chapters/06-troubleshooting/index.html#el-diagrama-no-cambia" id="toc-el-diagrama-no-cambia" class="nav-link" data-scroll-target="#el-diagrama-no-cambia"><span class="header-section-number">6.5</span> El diagrama no cambia</a></li>
+  </ul>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#requisitos" id="toc-requisitos" class="nav-link active" data-scroll-target="#requisitos"><span class="header-section-number">2.1</span> Requisitos</a></li>
+<li><a href="#requisitos" id="toc-requisitos" class="nav-link active" data-scroll-target="#requisitos"><span class="header-section-number">2.1</span> Requisitos</a></li>
   <li><a href="#servidor-plantuml-local" id="toc-servidor-plantuml-local" class="nav-link" data-scroll-target="#servidor-plantuml-local"><span class="header-section-number">2.2</span> Servidor PlantUML local</a></li>
   <li><a href="#instalar-desde-el-repositorio-local" id="toc-instalar-desde-el-repositorio-local" class="nav-link" data-scroll-target="#instalar-desde-el-repositorio-local"><span class="header-section-number">2.3</span> Instalar desde el repositorio local</a></li>
-  <li><a href="#verificar-la-instalación" id="toc-verificar-la-instalación" class="nav-link" data-scroll-target="#verificar-la-instalación"><span class="header-section-number">2.4</span> Verificar la instalación</a></li>
-  </ul>
-</nav>
-    </div>
+  <li><a href="#verificar-la-instalaci%C3%B3n" id="toc-verificar-la-instalación" class="nav-link" data-scroll-target="#verificar-la-instalación"><span class="header-section-number">2.4</span> Verificar la instalación</a></li>
+  </ul></nav>
+</div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Instalación</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">2</span>  <span class="chapter-title">Instalación</span>
+</h1>
 </div>
 
 
@@ -276,45 +296,37 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
 
-</header>
-
-
-<!-- Generated by iasi.quarto. Do not edit. -->
-<section id="requisitos" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="requisitos"><span class="header-section-number">2.1</span> Requisitos</h2>
+</header><!-- Generated by iasi.quarto. Do not edit. --><section id="requisitos" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="requisitos">
+<span class="header-section-number">2.1</span> Requisitos</h2>
 <p>Para utilizar IASI PlantUML necesitas:</p>
 <ul>
 <li>Quarto 1.4 o posterior.</li>
 <li>Un proyecto Quarto.</li>
 <li>Acceso a un servidor PlantUML.</li>
 <li>Bash para utilizar los scripts locales de <code>iasi-lua</code>.</li>
-</ul>
-</section>
-<section id="servidor-plantuml-local" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="servidor-plantuml-local"><span class="header-section-number">2.2</span> Servidor PlantUML local</h2>
+</ul></section><section id="servidor-plantuml-local" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="servidor-plantuml-local">
+<span class="header-section-number">2.2</span> Servidor PlantUML local</h2>
 <p>La configuración Docker actual de IASI publica PlantUML en el puerto <code>10025</code>:</p>
 <pre class="text"><code>http://localhost:10025</code></pre>
 <p>Puedes comprobar que responde abriendo esa dirección en el navegador o consultándola con <code>curl</code>.</p>
-</section>
-<section id="instalar-desde-el-repositorio-local" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="instalar-desde-el-repositorio-local"><span class="header-section-number">2.3</span> Instalar desde el repositorio local</h2>
+</section><section id="instalar-desde-el-repositorio-local" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="instalar-desde-el-repositorio-local">
+<span class="header-section-number">2.3</span> Instalar desde el repositorio local</h2>
 <p>Desde <code>iasi-lua</code>, construye las distribuciones e instala la extensión en el proyecto consumidor:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./scripts/install-local.sh</span> /ruta/al/proyecto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold">
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./scripts/install-local.sh</span> /ruta/al/proyecto</span></code></pre></div>
+<button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button>
+</div>
 <p>El script genera las extensiones y ejecuta internamente <code>quarto add</code>. El proyecto recibirá:</p>
 <pre class="text"><code>_extensions/
 └── iasi-plantuml/</code></pre>
-</section>
-<section id="verificar-la-instalación" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="verificar-la-instalación"><span class="header-section-number">2.4</span> Verificar la instalación</h2>
+</section><section id="verificar-la-instalación" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="verificar-la-instalación">
+<span class="header-section-number">2.4</span> Verificar la instalación</h2>
 <p>Comprueba que existe el manifiesto:</p>
 <pre class="text"><code>_extensions/iasi-plantuml/_extension.yml</code></pre>
 <p>No edites los archivos instalados dentro de <code>_extensions/</code>: son una distribución generada y deben reemplazarse mediante una nueva instalación.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -713,16 +725,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../../chapters/01-introduction/index.html" class="pagination-link" aria-label="Introducción">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>  <span class="chapter-title">Introducción</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../chapters/03-configuration/index.html" class="pagination-link" aria-label="Configuración">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Configuración</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>  <span class="chapter-title">Configuración</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -731,4 +741,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-</body></html>
+</body>
+</html>
